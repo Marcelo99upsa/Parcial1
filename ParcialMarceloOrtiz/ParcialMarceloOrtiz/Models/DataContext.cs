@@ -9,5 +9,7 @@ namespace ParcialMarceloOrtiz.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<ParcialMarceloOrtiz.Models.Country> Countries { get; set; }
     }
 }

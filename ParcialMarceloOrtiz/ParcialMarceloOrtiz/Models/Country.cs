@@ -10,8 +10,8 @@ namespace ParcialMarceloOrtiz.Models
     {
         [Key]
         [Required(ErrorMessage = "You must enter the field {0}")]
-        [Range(1,9999)]
-        public int Alpha3Code { get; set; }
+        [StringLength(3, ErrorMessage = "The field {0} must must contain betwen {2} and {1} characters", MinimumLength = 1)]
+        public string Alpha3Code { get; set; }
 
         [Required(ErrorMessage = "You must enter the field {0}")]
         public string Region { get; set; }
@@ -21,9 +21,11 @@ namespace ParcialMarceloOrtiz.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "You must enter the field {0}")]
-        public string Area { get; set; }
+        [Range(1,9999)]
+        public int Area { get; set; }
 
         [Required(ErrorMessage ="You must enter the field {0}")]
+        [Range(1, 9999)]
         public int Callingcodes { get; set; }
 
         [Required(ErrorMessage = "You must enter the field {0}")]
